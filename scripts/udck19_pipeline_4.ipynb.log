@@ -1,0 +1,315 @@
+udck19_pipeline_4.ipynb:INFO:
+udck19 Supplementary Materials 4
+CONDA_DEFAULT_ENV: udck19_pnas_121819
+pandas: 0.25.2 
+fitgrid: 0.4.8
+Start 19.Dec 2019 12:54:16
+
+udck19_pipeline_4.ipynb:INFO:
+Extreme Cook's D criterion: 0.00033 = 4 / (n - k - 1) 
+where
+  n = 12043 number of single trial epochs 
+  k = 2 for OLS intercept, slope
+
+udck19_pipeline_4.ipynb:INFO:Maximum allowed extreme Cook's D data points per epoch on any channel: 15.0% of 375 timepoints = 56
+udck19_pipeline_4.ipynb:INFO:
+
+Average proportion of extreme Cook's D samples per epoch:
+overall: 0.019
+by channel:
+diagnostic      channel
+cooks_distance  RLPf       0.017470
+                RMPf       0.020071
+                RDFr       0.020374
+                RLFr       0.018801
+                RMFr       0.020358
+                RMCe       0.018933
+                RDCe       0.020256
+                RDPa       0.017756
+                RLTe       0.019961
+                RLOc       0.018084
+                RMOc       0.016744
+                MiPf       0.017003
+                MiCe       0.020021
+                MiPa       0.018142
+                MiOc       0.017489
+                LLPf       0.016404
+                LMPf       0.020568
+                LDFr       0.019883
+                LLFr       0.018479
+                LMFr       0.019957
+                LMCe       0.018549
+                LDCe       0.019450
+                LDPa       0.017721
+                LLTe       0.019563
+                LLOc       0.018495
+                LMOc       0.016139
+dtype: float64
+
+udck19_pipeline_4.ipynb:INFO:Note: the left tail of Log10 plots is truncated, Cook's D values < 10e-10 are not shown
+udck19_pipeline_4.ipynb:INFO:
+Extreme Cook's D proportions of epochs x channel
+diagnostic      channel       
+cooks_distance  RLPf     count    375.000000
+                         mean       0.049173
+                         std        0.001550
+                         min        0.044839
+                         25%        0.048161
+                         50%        0.049074
+                         75%        0.050237
+                         max        0.053309
+                RMPf     count    375.000000
+                         mean       0.050255
+                         std        0.001348
+                         min        0.046334
+                         25%        0.049406
+                         50%        0.050154
+                         75%        0.051067
+                         max        0.054970
+                RDFr     count    375.000000
+                         mean       0.050223
+                         std        0.001434
+                         min        0.046002
+                         25%        0.049157
+                         50%        0.050154
+                         75%        0.051233
+                         max        0.054222
+                RLFr     count    375.000000
+                         mean       0.048401
+                         std        0.002055
+                         min        0.043179
+                         25%        0.046749
+                         50%        0.048493
+                         75%        0.049988
+                         max        0.053973
+                RMFr     count    375.000000
+                         mean       0.050901
+                         std        0.001282
+                         min        0.048078
+                         25%        0.049988
+                         50%        0.050901
+                         75%        0.051856
+                         max        0.054721
+                RMCe     count    375.000000
+                         mean       0.051231
+                         std        0.001348
+                         min        0.047496
+                         25%        0.050320
+                         50%        0.051233
+                         75%        0.052146
+                         max        0.056464
+                RDCe     count    375.000000
+                         mean       0.050815
+                         std        0.001342
+                         min        0.047164
+                         25%        0.049905
+                         50%        0.050735
+                         75%        0.051690
+                         max        0.054970
+                RDPa     count    375.000000
+                         mean       0.051160
+                         std        0.001311
+                         min        0.047912
+                         25%        0.050237
+                         50%        0.051150
+                         75%        0.052063
+                         max        0.055136
+                RLTe     count    375.000000
+                         mean       0.050195
+                         std        0.001645
+                         min        0.045836
+                         25%        0.049074
+                         50%        0.050320
+                         75%        0.051233
+                         max        0.054388
+                RLOc     count    375.000000
+                         mean       0.051138
+                         std        0.001467
+                         min        0.046915
+                         25%        0.050071
+                         50%        0.051067
+                         75%        0.052230
+                         max        0.055136
+                RMOc     count    375.000000
+                         mean       0.051827
+                         std        0.001433
+                         min        0.048161
+                         25%        0.050901
+                         50%        0.051731
+                         75%        0.052728
+                         max        0.055468
+                MiPf     count    375.000000
+                         mean       0.049424
+                         std        0.001449
+                         min        0.045753
+                         25%        0.048410
+                         50%        0.049489
+                         75%        0.050403
+                         max        0.054305
+                MiCe     count    375.000000
+                         mean       0.050850
+                         std        0.001274
+                         min        0.047330
+                         25%        0.049946
+                         50%        0.050818
+                         75%        0.051773
+                         max        0.054804
+                MiPa     count    375.000000
+                         mean       0.051213
+                         std        0.001405
+                         min        0.047164
+                         25%        0.050403
+                         50%        0.051233
+                         75%        0.052188
+                         max        0.055551
+                MiOc     count    375.000000
+                         mean       0.052305
+                         std        0.001510
+                         min        0.047496
+                         25%        0.051316
+                         50%        0.052396
+                         75%        0.053350
+                         max        0.056464
+                LLPf     count    375.000000
+                         mean       0.049986
+                         std        0.001381
+                         min        0.045005
+                         25%        0.049074
+                         50%        0.049988
+                         75%        0.050942
+                         max        0.054056
+                LMPf     count    375.000000
+                         mean       0.050123
+                         std        0.001365
+                         min        0.046832
+                         25%        0.049282
+                         50%        0.050154
+                         75%        0.050984
+                         max        0.055136
+                LDFr     count    375.000000
+                         mean       0.050489
+                         std        0.001470
+                         min        0.045504
+                         25%        0.049406
+                         50%        0.050486
+                         75%        0.051399
+                         max        0.054804
+                LLFr     count    375.000000
+                         mean       0.048488
+                         std        0.001622
+                         min        0.045088
+                         25%        0.047247
+                         50%        0.048327
+                         75%        0.049489
+                         max        0.053641
+                LMFr     count    375.000000
+                         mean       0.050538
+                         std        0.001482
+                         min        0.045670
+                         25%        0.049572
+                         50%        0.050486
+                         75%        0.051482
+                         max        0.055385
+                LMCe     count    375.000000
+                         mean       0.051114
+                         std        0.001401
+                         min        0.046749
+                         25%        0.050237
+                         50%        0.051233
+                         75%        0.052063
+                         max        0.054970
+                LDCe     count    375.000000
+                         mean       0.050880
+                         std        0.001474
+                         min        0.046832
+                         25%        0.049905
+                         50%        0.050901
+                         75%        0.051980
+                         max        0.054970
+                LDPa     count    375.000000
+                         mean       0.051470
+                         std        0.001390
+                         min        0.047496
+                         25%        0.050486
+                         50%        0.051482
+                         75%        0.052479
+                         max        0.054970
+                LLTe     count    375.000000
+                         mean       0.049368
+                         std        0.001521
+                         min        0.045587
+                         25%        0.048244
+                         50%        0.049240
+                         75%        0.050320
+                         max        0.054139
+                LLOc     count    375.000000
+                         mean       0.051071
+                         std        0.001441
+                         min        0.047580
+                         25%        0.050071
+                         50%        0.050984
+                         75%        0.052063
+                         max        0.055634
+                LMOc     count    375.000000
+                         mean       0.051390
+                         std        0.001463
+                         min        0.047580
+                         25%        0.050486
+                         50%        0.051399
+                         75%        0.052396
+                         max        0.055385
+dtype: float64
+
+udck19_pipeline_4.ipynb:INFO:
+extreme Cooks D trimming bound: 0.00033
+
+udck19_pipeline_4.ipynb:INFO:
+number of epochs after Cook's D screening / before = 
+7346 / 12043 = 0.610
+
+udck19_pipeline_4.ipynb:INFO:['article_cloze', 'ART_noun_cloze', 'NA_noun_cloze']
+udck19_pipeline_4.ipynb:INFO:Prepared epochs after dropping EEG artifacts and Cooks D outliers: timestamps: 375, epochs 7346
+udck19_pipeline_4.ipynb:INFO:index names: ['Epoch_idx', 'Time']
+udck19_pipeline_4.ipynb:INFO:columns: Index(['expt', 'sub_id', 'item_id', 'h5_dataset', 'dataset_index',
+       'event_code', 'regex_match', 'regex_anchor', 'garv_reject', 'article',
+       'adjective', 'noun', 'article_cloze', 'ART_noun_cloze', 'NA_noun_cloze',
+       'lle', 'lhz', 'MiPf', 'LLPf', 'RLPf', 'LMPf', 'RMPf', 'LDFr', 'RDFr',
+       'LLFr', 'RLFr', 'LMFr', 'RMFr', 'LMCe', 'RMCe', 'MiCe', 'MiPa', 'LDCe',
+       'RDCe', 'LDPa', 'RDPa', 'LMOc', 'RMOc', 'LLTe', 'RLTe', 'LLOc', 'RLOc',
+       'MiOc', 'A2', 'HEOG', 'rle', 'rhz', 'article_item_id', 'ptp_excursion',
+       'blocked', 'garv_blink', 'garv_screen', 'eeg_screen', 'article_cloze_z',
+       'ART_noun_cloze_z', 'NA_noun_cloze_z'],
+      dtype='object')
+udck19_pipeline_4.ipynb:INFO:
+Writing Cooks D screened EEG data epochs
+HDF5: /mnt/cube/home/turbach/papers/udck19/analysis/data/epochs/prepochs_trimd_eeg_cooksD.h5, key=eeg_screen_cooksD
+
+udck19_pipeline_4.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef_cooksD.h5
+    ['article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ '(1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | expt) + (1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_4.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 13:24:22
+udck19_pipeline_4.ipynb:INFO:Elapsed time: 0:26:10.883746
+
+udck19_pipeline_4.ipynb:INFO:fitting (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 13:50:33
+udck19_pipeline_4.ipynb:INFO:Elapsed time: 0:26:26.082880
+
+udck19_pipeline_4.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 14:16:59
+udck19_pipeline_4.ipynb:INFO:Elapsed time: 0:12:25.169995
+
+udck19_pipeline_4.ipynb:INFO:fitting (1 | expt) + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 14:29:24
+udck19_pipeline_4.ipynb:INFO:Elapsed time: 0:12:04.355574
+
+udck19_pipeline_4.ipynb:INFO:
+Done 19.Dec 2019 14:44:26
+Elapsed time: 1:50:09.645103
+

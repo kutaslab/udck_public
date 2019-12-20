@@ -1,0 +1,101 @@
+# Six norming experiments
+---
+
+# Single sentences, without articles (AAn)
+norm_1:
+  expt_id: norm_1
+  n_subject_ids: 30
+  n_stim_list_ids: 1
+  n_item_ids: 90
+  n_responses_per_sub: 90
+  n_stim: 90
+  n_sentences: 1
+  articles: ['NA']
+  adjectives: ['NA']
+  nouns: ['NA']
+  subject_exclusions: {}
+  item_exclusions: {}
+
+# Single sentences, with articles used for UDCK18 eeg_1 (= DUK05;
+# a.k.a. AAn, arquant)
+norm_2:
+  expt_id: norm_2
+  n_subject_ids: 60
+  n_stim_list_ids: 2
+  n_item_ids: 180
+  n_responses_per_sub: 90
+  n_stim: 90
+  n_sentences: 1
+  articles: ['a', 'an']
+  adjectives: ['NA']
+  nouns: ['NA']
+  subject_exclusions: {}
+  item_exclusions: {}
+
+# Two sentence materials, without articles adapted from but not
+# identical to the 80 eeg_1 stimuli plus 80 new items.
+norm_3:
+  expt_id: norm_3
+  n_subject_ids: 32
+  n_stim_list_ids: 1
+  n_item_ids: 160
+  n_responses_per_sub: 160
+  n_stim: 160
+  n_sentences: 2
+  articles: ['NA']
+  adjectives: ['NA']
+  nouns: ['NA']
+  subject_exclusions: {}
+  item_exclusions: {}
+
+# Two sentence materials, with articles. 160 stim from Norming 3 plus
+# 44 new stim = 204 items x 2 articles. First 160 used for eeg_2 (=
+# DQK14 Exp 1, noun late positivity; a.k.a. AA2/ArcADJ, arcadj)
+norm_4:
+  expt_id: norm_4
+  n_subject_ids: 64
+  n_stim_list_ids: 2
+  n_item_ids: 408
+  n_responses_per_sub: 204
+  n_stim: 204
+  n_sentences: 2
+  articles: ['a', 'an']
+  adjectives: ['NA']
+  nouns: ['NA']
+  subject_exclusions: {
+    s46_norm_4: "many but not all responses misaligned with stimuli,
+      reason unknown, judged a entry error. TPU"}
+  item_exclusions: {}
+
+# 36 additional materials added to norm_4 to make 240 total; two
+# sentences, with articles. 240 used for eeg_3 (unpublished, aka
+# yantana)
+norm_5:
+  expt_id: norm_5
+  n_subject_ids: 64
+  n_stim_list_ids: 2
+  n_item_ids: 72
+  n_responses_per_sub: 36
+  n_stim: 36
+  n_sentences: 2
+  articles: ['a', 'an']
+  adjectives: ['NA']
+  nouns: ['NA']
+  subject_exclusions: {}
+  item_exclusions: {}
+
+# 80 additional materials added to norm_3 to make 240 total; two
+# sentences without articles.
+norm_6:
+  expt_id: norm_6
+  n_subject_ids: 32
+  n_stim_list_ids: 1
+  n_item_ids: 80
+  n_responses_per_sub: 80
+  n_stim: 80
+  n_sentences: 2
+  articles: ['NA']
+  adjectives: ['NA']
+  nouns: ['NA']
+  subject_exclusions: {}
+  item_exclusions: {}

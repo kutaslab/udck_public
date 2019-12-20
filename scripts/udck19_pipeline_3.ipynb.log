@@ -1,0 +1,58 @@
+udck19_pipeline_3.ipynb:INFO:
+udck19 Supplementary Materials 3
+CONDA_DEFAULT_ENV: udck19_pnas_121819
+pandas: 0.25.2 
+fitgrid: 0.4.8
+Start 19.Dec 2019 12:36:02
+
+udck19_pipeline_3.ipynb:INFO:
+Loading fitted models: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5
+
+udck19_pipeline_3.ipynb:INFO:model set: lmer_acz_ranef
+article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | expt) + (1 | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | expt) + (1 | sub_id)
+article_cloze_z + (1 | expt) + (1 | article_item_id)
+(article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+(1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+(1 | expt) + (1 | sub_id) + (1 | article_item_id)
+udck19_pipeline_3.ipynb:INFO:Random effects model set
+article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | expt) + (1 | sub_id) + (article_cloze_z | article_item_id)
+article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+article_cloze_z + (1 | expt) + (1 | sub_id)
+article_cloze_z + (1 | expt) + (1 | article_item_id)
+udck19_pipeline_3.ipynb:INFO:LMER_ACZ_RANEF_F: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5
+udck19_pipeline_3.ipynb:INFO:
+Model comparisons with experiment as a fixed effect
+/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_x_expt_ranef.h5
+{'KIM': ('article_cloze_z + expt + (article_cloze_z | sub_id) + (1 | '
+         'article_item_id)',
+         'expt + (article_cloze_z | sub_id) + (1 | article_item_id)'),
+ 'KIP': ('article_cloze_z + expt + (1 | sub_id) + (1 | article_item_id)',
+         'expt + (1 | sub_id) + (1 | article_item_id)')}
+
+udck19_pipeline_3.ipynb:INFO:
+Model comparisons for each data set separately
+{'KIM': ['article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+         '(article_cloze_z | sub_id) + (1 | article_item_id)'],
+ 'KIP': ['article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+         '(1 | sub_id) + (1 | article_item_id)']}
+
+udck19_pipeline_3.ipynb:INFO:
+Done 19.Dec 2019 12:53:49
+Elapsed time: 0:17:46.965919
+

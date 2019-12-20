@@ -1,0 +1,384 @@
+udck19_pipeline_2.ipynb:INFO:
+udck19 Supplementary Materials 2
+CONDA_DEFAULT_ENV: udck19_pnas_121819
+pandas: 0.25.2 
+fitgrid: 0.4.8
+Start 18.Dec 2019 15:52:14
+
+udck19_pipeline_2.ipynb:INFO:
+    lmer_acz_ranef
+    ['article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + '
+ '(article_cloze_z | article_item_id)',
+ 'article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 '
+ '| article_item_id)',
+ 'article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (article_cloze_z '
+ '| article_item_id)',
+ 'article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (article_cloze_z '
+ '| article_item_id)',
+ 'article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (1 | '
+ 'article_item_id)',
+ 'article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id) + (article_cloze_z | '
+ 'article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id)',
+ 'article_cloze_z + (1 | expt) + (1 | article_item_id)',
+ '(article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ '(1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(1 | expt) + (1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:
+    lmer_acz_x_expt_ranef
+    ['article_cloze_z + expt + expt:article_cloze_z + (article_cloze_z | sub_id) + '
+ '(1 | article_item_id)',
+ 'article_cloze_z + expt + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'expt + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + expt + expt:article_cloze_z + (1 | sub_id) + (1 | '
+ 'article_item_id)',
+ 'article_cloze_z + expt + (1 | sub_id) + (1 | article_item_id)',
+ 'expt + (1 | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:Loading prepared and artifact screened epochs: /mnt/cube/home/turbach/papers/udck19/analysis/data/epochs/prepochs_trimd_eeg.h5
+udck19_pipeline_2.ipynb:INFO:
+Prepared epochs after dropping EEG artifacts
+    timestamps: 375, epochs 12043
+    index names: ['Epoch_idx', 'Time']
+    columns: Index(['expt', 'sub_id', 'item_id', 'h5_dataset', 'dataset_index',
+       'event_code', 'regex_match', 'regex_anchor', 'garv_reject', 'article',
+       'adjective', 'noun', 'article_cloze', 'ART_noun_cloze', 'NA_noun_cloze',
+       'lle', 'lhz', 'MiPf', 'LLPf', 'RLPf', 'LMPf', 'RMPf', 'LDFr', 'RDFr',
+       'LLFr', 'RLFr', 'LMFr', 'RMFr', 'LMCe', 'RMCe', 'MiCe', 'MiPa', 'LDCe',
+       'RDCe', 'LDPa', 'RDPa', 'LMOc', 'RMOc', 'LLTe', 'RLTe', 'LLOc', 'RLOc',
+       'MiOc', 'A2', 'HEOG', 'rle', 'rhz', 'article_item_id', 'ptp_excursion',
+       'blocked', 'garv_blink', 'garv_screen', 'eeg_screen', 'article_cloze_z',
+       'ART_noun_cloze_z', 'NA_noun_cloze_z'],
+      dtype='object')
+    means and sds: {'article_cloze': {'mean': 0.4076120567966787, 'sd': 0.38896284991204993}, 'ART_noun_cloze': {'mean': 0.3661228489902674, 'sd': 0.39817711892390467}, 'NA_noun_cloze': {'mean': 0.3574003985718258, 'sd': 0.41028924805996025}}")
+
+udck19_pipeline_2.ipynb:INFO:                  expt    sub_id             item_id         h5_dataset  \
+Epoch_idx Time                                                            
+10000     -1496  eeg_1  arquan01  i005_1_a__NA_check  arquan01/dblock_1   
+          -1488  eeg_1  arquan01  i005_1_a__NA_check  arquan01/dblock_1   
+          -1480  eeg_1  arquan01  i005_1_a__NA_check  arquan01/dblock_1   
+          -1472  eeg_1  arquan01  i005_1_a__NA_check  arquan01/dblock_1   
+          -1464  eeg_1  arquan01  i005_1_a__NA_check  arquan01/dblock_1   
+
+                 dataset_index  event_code  regex_match  regex_anchor  \
+Epoch_idx Time                                                          
+10000     -1496          11318           0            5             5   
+          -1488          11320           0            5             5   
+          -1480          11322           0            5             5   
+          -1472          11324           0            5             5   
+          -1464          11326           0            5             5   
+
+                 garv_reject article  ...       rhz article_item_id  \
+Epoch_idx Time                        ...                             
+10000     -1496            0       a  ...  2.643902    i005_1_a__NA   
+          -1488            0       a  ...  3.227147    i005_1_a__NA   
+          -1480            0       a  ...  4.316212    i005_1_a__NA   
+          -1472            0       a  ...  5.700624    i005_1_a__NA   
+          -1464            0       a  ...  6.542883    i005_1_a__NA   
+
+                 ptp_excursion  blocked  garv_blink  garv_screen  eeg_screen  \
+Epoch_idx Time                                                                 
+10000     -1496              0        0           0       accept      accept   
+          -1488              0        0           0       accept      accept   
+          -1480              0        0           0       accept      accept   
+          -1472              0        0           0       accept      accept   
+          -1464              0        0           0       accept      accept   
+
+                 article_cloze_z  ART_noun_cloze_z  NA_noun_cloze_z  
+Epoch_idx Time                                                       
+10000     -1496        -0.963105         -0.919497        -0.871094  
+          -1488        -0.963105         -0.919497        -0.871094  
+          -1480        -0.963105         -0.919497        -0.871094  
+          -1472        -0.963105         -0.919497        -0.871094  
+          -1464        -0.963105         -0.919497        -0.871094  
+
+[5 rows x 56 columns]
+udck19_pipeline_2.ipynb:INFO:                 expt sub_id                item_id      h5_dataset  \
+Epoch_idx Time                                                        
+35711     1464  eeg_3  yan24  i226_2_a__NA_decision  yan24/dblock_9   
+          1472  eeg_3  yan24  i226_2_a__NA_decision  yan24/dblock_9   
+          1480  eeg_3  yan24  i226_2_a__NA_decision  yan24/dblock_9   
+          1488  eeg_3  yan24  i226_2_a__NA_decision  yan24/dblock_9   
+          1496  eeg_3  yan24  i226_2_a__NA_decision  yan24/dblock_9   
+
+                dataset_index  event_code  regex_match  regex_anchor  \
+Epoch_idx Time                                                         
+35711     1464          57011           0          226           226   
+          1472          57013           0          226           226   
+          1480          57015           0          226           226   
+          1488          57017           0          226           226   
+          1496          57019           0          226           226   
+
+                garv_reject article  ...       rhz article_item_id  \
+Epoch_idx Time                       ...                             
+35711     1464            0       a  ... -3.110894    i226_2_a__NA   
+          1472            0       a  ... -1.372459    i226_2_a__NA   
+          1480            0       a  ...  0.448356    i226_2_a__NA   
+          1488            0       a  ...  1.810263    i226_2_a__NA   
+          1496            0       a  ...  2.486586    i226_2_a__NA   
+
+                ptp_excursion  blocked  garv_blink  garv_screen  eeg_screen  \
+Epoch_idx Time                                                                
+35711     1464              0        0           0       accept      accept   
+          1472              0        0           0       accept      accept   
+          1480              0        0           0       accept      accept   
+          1488              0        0           0       accept      accept   
+          1496              0        0           0       accept      accept   
+
+                article_cloze_z  ART_noun_cloze_z  NA_noun_cloze_z  
+Epoch_idx Time                                                      
+35711     1464        -0.564609         -0.595521        -0.871094  
+          1472        -0.564609         -0.595521        -0.871094  
+          1480        -0.564609         -0.595521        -0.871094  
+          1488        -0.564609         -0.595521        -0.871094  
+          1496        -0.564609         -0.595521        -0.871094  
+
+[5 rows x 56 columns]
+udck19_pipeline_2.ipynb:INFO:Start modeling: 18.Dec 2019 15:52:42
+udck19_pipeline_2.ipynb:INFO:lmer_acz_ranef
+udck19_pipeline_2.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5
+    ['article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + '
+ '(article_cloze_z | article_item_id)',
+ 'article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 '
+ '| article_item_id)',
+ 'article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (article_cloze_z '
+ '| article_item_id)',
+ 'article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (article_cloze_z '
+ '| article_item_id)',
+ 'article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (1 | '
+ 'article_item_id)',
+ 'article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id) + (article_cloze_z | '
+ 'article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | expt) + (1 | sub_id)',
+ 'article_cloze_z + (1 | expt) + (1 | article_item_id)',
+ '(article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ '(1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(1 | expt) + (1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:removing previous /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (article_cloze_z | article_item_id)
+18.Dec 2019 15:52:42
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 3:22:59.176082
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+18.Dec 2019 19:15:41
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 1:47:38.553109
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (article_cloze_z | article_item_id)
+18.Dec 2019 21:03:20
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 1:36:07.686090
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (article_cloze_z | article_item_id)
+18.Dec 2019 22:39:27
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 1:50:17.091283
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | expt) + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 00:29:45
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:41:27.558196
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 01:11:12
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:51:58.525819
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (1 | sub_id) + (article_cloze_z | article_item_id)
+19.Dec 2019 02:03:11
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:46:13.666595
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 02:49:24
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:17:46.473431
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 03:07:11
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:13:05.261790
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (1 | sub_id)
+19.Dec 2019 03:20:16
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:11:49.251289
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | expt) + (1 | article_item_id)
+19.Dec 2019 03:32:05
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:12:34.186558
+
+udck19_pipeline_2.ipynb:INFO:fitting (article_cloze_z | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 03:44:40
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 1:47:04.507551
+
+udck19_pipeline_2.ipynb:INFO:fitting (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 05:31:44
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:50:54.672591
+
+udck19_pipeline_2.ipynb:INFO:fitting (1 | expt) + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 06:22:39
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:17:37.952705
+
+udck19_pipeline_2.ipynb:INFO:lmer_acz_x_expt_ranef
+udck19_pipeline_2.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_x_expt_ranef.h5
+    ['article_cloze_z + expt + expt:article_cloze_z + (article_cloze_z | sub_id) + '
+ '(1 | article_item_id)',
+ 'article_cloze_z + expt + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'expt + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + expt + expt:article_cloze_z + (1 | sub_id) + (1 | '
+ 'article_item_id)',
+ 'article_cloze_z + expt + (1 | sub_id) + (1 | article_item_id)',
+ 'expt + (1 | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:removing previous /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_x_expt_ranef.h5
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + expt + expt:article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 06:40:17
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:35:03.469184
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + expt + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 07:15:20
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:33:14.538481
+
+udck19_pipeline_2.ipynb:INFO:fitting expt + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 07:48:35
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:33:25.261747
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 08:22:00
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:32:29.043234
+
+udck19_pipeline_2.ipynb:INFO:fitting (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 08:54:29
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:31:22.606001
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + expt + expt:article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 09:25:52
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:15:05.990294
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + expt + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 09:40:58
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:14:00.438350
+
+udck19_pipeline_2.ipynb:INFO:fitting expt + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 09:54:58
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:14:24.492743
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 10:09:23
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:13:28.582647
+
+udck19_pipeline_2.ipynb:INFO:fitting (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 10:22:51
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:13:15.666331
+
+udck19_pipeline_2.ipynb:INFO:Elapsed time modeling: 18:43:24.835115
+udck19_pipeline_2.ipynb:INFO:
+Models for each EEG dataset separately
+['article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | sub_id) + (1 | article_item_id)']
+
+udck19_pipeline_2.ipynb:INFO:Start modeling each experiment: 19.Dec 2019 10:36:07
+udck19_pipeline_2.ipynb:INFO:LMER modeling eeg_1
+udck19_pipeline_2.ipynb:INFO:Experiment: eeg_1: {'article_cloze': {'mean': 0.374555243445773, 'sd': 0.35027258879514567}, 'ART_noun_cloze': {'mean': 0.4624236891387456, 'sd': 0.4193737235680949}, 'NA_noun_cloze': {'mean': 0.4028398876403854, 'sd': 0.412367204390152}}
+udck19_pipeline_2.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_comp_eeg_1.h5
+    ['article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:removing previous /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_comp_eeg_1.h5
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 10:36:10
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:09:04.006259
+
+udck19_pipeline_2.ipynb:INFO:fitting (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 10:45:14
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:08:35.014597
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 10:53:49
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:07:31.903725
+
+udck19_pipeline_2.ipynb:INFO:fitting (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 11:01:21
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:07:08.771098
+
+udck19_pipeline_2.ipynb:INFO:LMER modeling eeg_2
+udck19_pipeline_2.ipynb:INFO:Experiment: eeg_2: {'article_cloze': {'mean': 0.4410584832907638, 'sd': 0.4114003014310366}, 'ART_noun_cloze': {'mean': 0.3009198167235219, 'sd': 0.41825421054473466}, 'NA_noun_cloze': {'mean': 0.4240126392468271, 'sd': 0.4387491964425865}}
+udck19_pipeline_2.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_comp_eeg_2.h5
+    ['article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:removing previous /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_comp_eeg_2.h5
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 11:08:36
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:12:13.213908
+
+udck19_pipeline_2.ipynb:INFO:fitting (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 11:20:50
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:12:06.647125
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 11:32:56
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:08:56.804279
+
+udck19_pipeline_2.ipynb:INFO:fitting (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 11:41:53
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:08:45.341462
+
+udck19_pipeline_2.ipynb:INFO:LMER modeling eeg_3
+udck19_pipeline_2.ipynb:INFO:Experiment: eeg_3: {'article_cloze': {'mean': 0.39128860469600674, 'sd': 0.3811083382643931}, 'ART_noun_cloze': {'mean': 0.3703202901311667, 'sd': 0.3659530243919706}, 'NA_noun_cloze': {'mean': 0.27952204619208465, 'sd': 0.36776334000259076}}
+udck19_pipeline_2.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_comp_eeg_3.h5
+    ['article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ '(article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'article_cloze_z + (1 | sub_id) + (1 | article_item_id)',
+ '(1 | sub_id) + (1 | article_item_id)']
+    
+udck19_pipeline_2.ipynb:INFO:removing previous /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_comp_eeg_3.h5
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 11:50:47
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:13:20.651290
+
+udck19_pipeline_2.ipynb:INFO:fitting (article_cloze_z | sub_id) + (1 | article_item_id)
+19.Dec 2019 12:04:07
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:12:38.318954
+
+udck19_pipeline_2.ipynb:INFO:fitting article_cloze_z + (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 12:16:46
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:09:31.519492
+
+udck19_pipeline_2.ipynb:INFO:fitting (1 | sub_id) + (1 | article_item_id)
+19.Dec 2019 12:26:17
+udck19_pipeline_2.ipynb:INFO:Elapsed time: 0:09:04.143621
+
+udck19_pipeline_2.ipynb:INFO:Elapsed time modeling experiments separately: 1:59:14.397764
+udck19_pipeline_2.ipynb:INFO:
+Done 19.Dec 2019 12:35:21
+Elapsed time: 20:43:07.706662
+

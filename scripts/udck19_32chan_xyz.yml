@@ -1,0 +1,152 @@
+# 3D RAS based on a measured red cap
+
+space:
+  coordinates: cartesian
+  distance_unit: cm
+  orientation: ras
+fiducials:
+  lpa:
+    x: -6.9
+    y: 0.0
+    z: 0.0
+  nasion:
+    x: 0.0
+    y: 8.5
+    z: 0.0
+  rpa:
+    x: 6.9
+    y: 0.0
+    z: 0.0
+sensors:
+  A1:
+    x: -6.2
+    y: -3.4
+    z: -0.1
+  A2:
+    x: 6.2
+    y: -3.4
+    z: -0.1
+  GND:
+    x: 0.0
+    y: 9.6
+    z: 8.5
+  LDCe_:
+    x: -7.4
+    y: 0.5
+    z: 10.4
+  LDFr:
+    x: -5.7
+    y: 4.8
+    z: 10.0
+  LDPa:
+    x: -5.8
+    y: -3.3
+    z: 10.1
+  LLFr:
+    x: -7.7
+    y: 2.5
+    z: 5.1
+  LLOc:
+    x: -5.0
+    y: -6.6
+    z: 6.1
+  LLPf:
+    x: -5.7
+    y: 7.2
+    z: 5.0
+  LLTe:
+    x: -7.8
+    y: -2.2
+    z: 5.5
+  LMCe:
+    x: -3.9
+    y: -0.3
+    z: 13.3
+  LMFr:
+    x: -2.7
+    y: 4.3
+    z: 13.2
+  LMOc:
+    x: -2.3
+    y: -5.8
+    z: 10.2
+  LMPf:
+    x: -2.3
+    y: 8.2
+    z: 9.9
+  MiCe:
+    x: 0.0
+    y: 1.7
+    z: 14.7
+  MiOc:
+    x: 0.0
+    y: -8.3
+    z: 6.0
+  MiPa:
+    x: 0.0
+    y: -2.7
+    z: 13.2
+  MiPf:
+    x: 0.0
+    y: 9.8
+    z: 5.6
+  RDCe:
+    x: 6.6
+    y: 0.7
+    z: 9.9
+  RDFr:
+    x: 5.7
+    y: 4.8
+    z: 10.0
+  RDPa:
+    x: 5.8
+    y: -3.3
+    z: 10.1
+  RLFr:
+    x: 7.7
+    y: 2.5
+    z: 5.1
+  RLOc:
+    x: 5.0
+    y: -6.6
+    z: 6.1
+  RLPf:
+    x: 5.7
+    y: 7.2
+    z: 5.0
+  RLTe:
+    x: 7.8
+    y: -2.2
+    z: 5.5
+  RMCe:
+    x: 3.9
+    y: -0.3
+    z: 13.3
+  RMFr:
+    x: 2.7
+    y: 4.3
+    z: 13.2
+  RMOc:
+    x: 2.3
+    y: -5.8
+    z: 10.2
+  RMPf:
+    x: 2.3
+    y: 8.2
+    z: 9.9
+  lhz:
+    x: -6.7
+    y: 5.5
+    z: 1.1
+  lle:
+    x: -4.5
+    y: 7.7
+    z: -1.7
+  rhz:
+    x: 6.7
+    y: 5.5
+    z: 1.1
+  rle:
+    x: 4.5
+    y: 7.7
+    z: -1.7

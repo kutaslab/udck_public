@@ -1,0 +1,440 @@
+# list of maps with EEG experiment specific info
+# Note: code start,stop are inclusive, use stop+1 for python range
+#
+# exclusions are items to drop from the analysis
+# exceptions are items to include with qualification
+#
+# patches are hacks to cleanup loose ends.
+# each patch is a map with a comment and a code key
+# comments and patch code are logged 
+# the patch code is run with exec() in python ... arbitrary code, horrible idea.
+
+
+---
+eeg_1:
+  expt_id: 'eeg_1'
+  expt_name: 'arquant'
+  scn_dir: 'eeg_1_arquant'
+  scn_patt: '{0}{1}?.scn'  # scenario file names
+  n_stim: 80
+  stim_tuple: 2  # how many stim per iNNN
+  n_noun_codes: 1  # how many noun codes per iNNN_?_art_???_noun
+  stim_ids: {start: 1, stop: 90}  # 1 - 90 (80 items, gappy ids)
+  noun_codes: {start: 10000, stop: 10904}
+  lists: ['A', 'B']
+  list_ids: {start: 1, stop: 20}
+  n_scn: 20  # number of scenario files each item_id
+  n_item_ids: 160 # stim set
+  n_good_item_ids: 159 # after exclusions
+
+  exclusions: {
+    i029_1_an_NA_emergency: 'eeg stim error
+
+      eeg_1: When she *was filled out the paperwork, Merrill had to
+      write down the name of someone who could be contacted in case of
+      an emergency while she was at work.'
+  }
+
+  exceptions: {
+    i008_1_an_NA_airplane: 'norm_2 item 8 stim error, eeg_1 is correct
+
+        eeg_1: The day was breezy so the boys went outside to fly an
+        airplane in the park.
+
+        norm_2: The day was breezy so the boys went outside to *a fly
+        an',
+
+    i034_1_an_NA_accident: 'eeg_1 item 31 differs from norm_2
+
+       eeg_1: When we saw the #finish line and# the pylons sectioning
+       off part of the road, we knew that there must have been
+
+       norm_2: When we saw the pylons sectioning off part of the road
+       #and a big sign that said "finish line"#, we knew that there
+       must have been',
+
+    i041_1_an_NA_umbrella: 'eeg_1 item 41 differs from norm_2
+
+      eeg_1: Because it frequently rains in London, #it''s a good idea
+      to always# carry an umbrella with you.
+
+      norm_2: Because it frequently rains in London, #most people#
+      carry an'
+
+  }
+
+eeg_2:
+  expt_id: 'eeg_2'
+  expt_name: 'arcadj'
+  scn_dir: 'eeg_2_arcadj'
+  scn_patt: '{0}Adj{1}?.scn'
+  n_stim: 160
+  stim_tuple: 4  # stim items in sets of 4
+  n_noun_codes: 1  # how many noun codes per iNNN_?_art_???_noun
+  stim_ids: {start: 1, stop: 160}
+  noun_codes: {start: 10011, stop: 11608}
+  lists: ['A', 'B', 'C', 'D']
+  list_ids: {start: 1, stop: 10}
+  n_scn: 10  # number of scenario files each item_id
+  n_item_ids: 640 # stim set before exclusions
+  n_good_item_ids: 637 # after exclusions
+
+  exclusions: {
+    i047_2_a__NA_dramatic: "item 47 scenario event error, noun code on
+      adjective",
+
+    i085_2_a__matching_envelope: 'item number 85/86 mismatch norming vs. eeg
+
+      eeg_2: Wendy went to pay for the birthday card. The clerk pointed out
+      that she had forgotten to pick up a matching envelope along with it.
+
+      norm_4: Jeffrey must have been preoccupied when he went to the post
+      office. He mailed the letter without a',
+
+    i086_2_an_affixed_stamp: 'item number 85/86 mismatch norming vs. eeg
+
+      eeg_2: Jeffrey must have been preoccupied when he went to the
+      post office. He mailed the letter without an affixed stamp on
+      it.
+
+      norm_4: Wendy went to pay for the birthday card. The clerk
+      pointed out that she had forgotten to pick up an'
+
+  }
+
+  exceptions: {
+    i012_2_a__NA_check: 'norming vs. eeg stim differ
+
+      eeg_2: Most of the time Janet #keeps in touch with people over
+      the phone or with e-mail. She hardly ever sits down to write a
+      check these days.
+
+      norm_4: Most of the time Janet #kept in touch with people
+      over the phone or with e-mail. She hardly ever sat down to write a',
+
+    i072_2_an_old_hat: 'norming stim error, eeg stim differ
+
+        eeg_2: The famous actor looked very stylish with the fedora
+        atop his head. My boyfriend just looks silly when he tries to
+        wear an old hat or hood.
+
+        norm_4: The famous actor looked very stylish with the
+        fedora atop his head. My boyfriend just looks silly when *tries
+        to wear an',
+
+    i132_2_a__NA_table: 'norming stim error, eeg stim OK
+
+      eeg_2: After two months of living in her apartment Dora was
+      still eating meals off a cardboard box. She swore this weekend
+      she would go shopping to buy a table for the house.
+
+      norm_4: After two months of living in her apartment Dora
+      was still eating meals off a cardboard box. She swore this
+      weekend *would she* go shopping to buy a',
+
+    i139_2_an_NA_ocean: 'norming stim error, eeg stim OK
+
+      eeg_2: A crowd gathered around the long-legged creature
+      burying its head in the sand. Most of them had never seen an
+      ocean except on television.
+
+      norm_4: A crowd gathered around the long-legged creature burying
+      its head in the sand. Most of *the them had never seen an',
+
+  }
+
+eeg_3:
+  expt_id: 'eeg_3'
+  expt_name: 'yantana'
+  scn_dir: 'eeg_3_yantana'
+  scn_patt: '{0}{1}?.scn'
+  n_stim: 240
+  stim_tuple: 2  # stim items in sets of 2
+  n_noun_codes: 1  # how many noun codes per iNNN_?_art_???_noun
+  stim_ids: {start: 1, stop: 240}
+  noun_codes: {start: 10011, stop: 12404}
+  lists: ['A', 'B']
+  list_ids: {start: 1, stop: 4}
+  n_scn: 4  # number of scenario files each item_id
+  n_item_ids: 480 
+  n_good_item_ids: 478 # after exclusions
+
+  exclusions: {
+
+    i025_2_a__NA_caricaturist: 'critical #noun differs across lists
+
+      eeg_3 B1b.scn, B2b.scn, B3b.scn: Kim wanted a memento of her
+      trip. On a street corner in Paris she had her portrait painted
+      by a #caricaturist for three francs.
+
+      eeg_3 B4b.scn: Kim wanted a memento of her trip. On a street
+      corner in Paris she had her portrait painted by a #cartoonist
+      for three francs.',
+
+    i025_2_a__NA_cartoonist: 'eeg_3 item 25 critical #noun differs
+    across lists
+
+      eeg_3 B1b.scn, B2b.scn, B3b.scn: Kim wanted a memento of her
+      trip. On a street corner in Paris she had her portrait painted
+      by a #caricaturist# for three francs.
+
+      eeg_3 B4b.scn: Kim wanted a memento of her trip. On a street
+      corner in Paris she had her portrait painted by a #cartoonist for
+      three francs.',
+
+    i025_2_an_NA_cartoonist: 'eeg_3 item 25 stim error, inconsistent
+      article noun
+
+      eeg_3 A1b.scn, A2b.scn, A3b.scn: Kim wanted a memento of her
+      trip. On a street corner in Paris she had her portrait painted
+      by *an #cartoonist#',
+
+    i025_2_an_NA_illustrator: 'eeg_3 item 25 stim lists differ
+
+      eeg_3 A4a.scn: Kim wanted a memento of her trip. On a street
+      corner in Paris she had her portrait painted by an #illustrator#
+
+      eeg_3 A1b.scn, A2b.scn, A3b.scn: Kim wanted a memento of her
+      trip. On a street corner in Paris she had her portrait painted
+      by *an #cartoonist#',
+
+    i139_2_#ERROR_NA_a: 'misplaced noun event code ^ in A4a.scn,
+      A1a.scn, A2a.scn, A3a.scn are OK
+
+      eeg_3 A4a.scn: A crowd gathered around the long-legged creature
+      burying its head in the sand. Most of the them had never seen ^a
+      crane except on television.',
+
+    i139_2_#ERROR_NA_an: 'misplaced noun event code ^ in B4a.scn,
+      B1a.scn, B2a.scn, B3a.scn are OK.
+
+      eeg_3: A crowd gathered around the long-legged creature
+      burying its head in the sand. Most of the them had never seen ^an
+      ostrich except on television.',
+
+    i162_2_#ERROR_NA_difference: 'misplaced noun event code ^ all
+      stim files
+
+      eeg_3: Franz was thoroughly confused when the class
+      started analyzing Latin sentences. He couldn''t tell the
+      ^difference between a verb and a noun.'
+  }
+
+  exceptions: {
+    # FIX ME
+    # i012_2_a__NA_letter: item 12 context variant of eeg_2,
+    # i039_2_a__NA_representative: "lists B1 B2 B3 missing terminal period, B4 is ok",
+    # i085_2_a__NA_stamp: item 85 context variant of eeg_2,
+    # i086_2_an_NA_envelope: item 86 context variant of eeg_2,
+    # i089_2_an_NA_amateur: item 89 context variant of eeg_2,
+    # i105_2_an_NA_actor: item 105 context variant of eeg_2,
+
+    i005_2_an_NA_accent: 'eeg_3 item 5 differs from norm_4 and eeg_2
+
+      eeg_3: It was difficult to understand the visiting
+      professor. Like many #foreigners# he spoke with
+
+      norm_4: It was difficult to understand the visiting
+      professor. Like many #foreign speakers# he spoke with
+
+      eeg_2: It was difficult to understand the visiting
+      professor.  Like many #foreign speakers# he spoke with',
+
+    i028_2_a__NA_professor: 'eeg_3 item 28 differs from norm_4 and eeg_2
+
+      eeg_3: Many people dream of teaching at a college or
+      university. But few #realize how much work it takes to become
+
+      norm_4: Many people dream of teaching at a college or
+      university. But few #know# how much work it takes to become
+
+      eeg_2: Many people dream of teaching at a college or
+      university.  But few #know# how much work it takes to become',
+
+    i036_2_a__NA_murder: 'eeg_3 item 36 differs from norm_4
+
+      eeg_3: The chalk outline of the body traced by the police
+      #remained# on the sidewalk. The night before someone had committed
+
+      norm_4: The chalk outline of the body traced by the police #still
+      remained# on the sidewalk. The night before someone had committed',
+
+    i047_2_an_NA_arrest: 'eeg_3 item 47 differs from norm_4
+
+      eeg_3: The detectives had been searching for a suspect for
+      years. Finally there was some #news# that the police had made
+
+      norm_4: The detectives had been searching for a suspect for
+      years. Finally there was some #breaking news# that the police had
+      made',
+
+    i072_2_an_NA_accessory: 'norm_4 item 72 stim error, eeg_3 item is
+      correct
+
+      norm_4: The famous actor looked very stylish with the fedora
+      atop his head. My boyfriend just looks silly when *tries to wear
+
+      eeg_3: The famous actor looked very stylish with the fedora atop
+      his head. My boyfriend just looks silly when he tries to wear',
+
+    i089_2_a__NA_novice: 'eeg_item 39 differs from norm_4
+
+      eeg_3: The professional photographer was #not allowed to
+      participate in# the photo contest. The rules explicitly state
+      that you must be
+
+      norm_4: The professional photographer was #disqualified from# the
+      photo contest. The rules explicitly state that you must be',
+
+    i104_2_an_NA_expatriot: 'eeg_3 item 104 differs from norm_4
+
+      eeg_3: At dinner #Ian# told us that he had practiced medicine in
+      several different countries. Until then nobody had realized that
+      he was
+
+      norm_4: At dinner #our friend''s date# told us that he had
+      practiced medicine in several different countries. Until then
+      nobody had realized that he was',
+
+    i105_2_a__NA_dancer: 'eeg_3 item 105 differs from norm_4
+
+      eeg_3: #Ed# moved to Hollywood and was supporting himself by
+      waiting tables. He hoped to get some auditions and find work as
+
+      norm_4: #Lance had# moved to Hollywood and was supporting himself
+      by waiting tables. He hoped to get some auditions and find work
+      as',
+
+    i114_2_an_NA_apparatus: 'eeg_3 item 114 differs from norm_4
+
+      eeg_3: The doctors would not allow Monica to walk so soon after
+      her surgery. The only way for her to move #around# was in
+
+      norm_4: The doctors would not allow Monica to walk so soon after
+      her surgery. The only way for her to move #from place to place#
+      was in',
+
+    i132_2_an_NA_ottoman: 'norm_4 item 132 stimulus error, eeg_3 is correct
+
+      norm_4: After two months of living in her apartment Dora was
+      still eating meals off a cardboard box. She swore this weekend
+      *would she go shopping to buy
+
+      eeg_3: After two months of living in her apartment Dora was
+      still eating meals off a cardboard box. She swore this weekend
+      #she would# go shopping to buy',
+
+    i168_2_a__NA_sandwich: 'eeg_3 item 168 differs from norm_4
+
+      eeg_3: #Tony# was so busy at work that he forgot to eat
+      lunch. Before heading to the gym he #ate#
+
+      norm_4: #Ed# was so busy at work that he forgot to eat
+      lunch. Before heading to the gym he #had#',
+
+    i186_2_an_NA_ant: 'norm_4 item 186 stim error, eeg_3 is correct
+
+      norm_4: Brad felt something crawl across his arm as he napped
+      underneath the tree. He looked down and saw that *is was
+
+      eeg_3: Brad felt something crawl across his arm as he napped
+      underneath the tree. He looked down and saw that it was',
+
+    i193_2_an_NA_appointment: 'eeg_3 item 193 differs from norm_4
+
+      eeg_3: Jimmy''s grade school teacher called his parents. #The
+      teacher# wanted to schedule
+
+      norm_4: Jimmy''s grade school teacher called his parents. #She#
+      wanted to schedule',
+
+    i202_2_an_NA_arch: 'eeg_3 item 202 differs from norm_4
+
+      eeg_3: We didn''t have very good seats #at the show#. My line of
+      sight was blocked by
+
+      norm_4: We didn''t have very good seats ##. My line of sight
+      was blocked by',
+
+    i206_2_an_NA_asteroid: 'eeg_3 item 206 differs from norm_5
+
+      eeg stim: Astronomers #downplayed# the likelihood of imminent
+      disaster. They doubted that Earth would ever collide with
+
+      norm_5: Astronomers #played down# the likelihood of imminent
+      disaster. They doubted that Earth would ever collide with',
+
+    i207_2_an_NA_outsider: 'norm_5 item 207 stim error, eeg_3 is correct
+
+      norm_5: At school Jeff never felt like he fit in. He always
+      *consider himself to be somewhat of
+
+      eeg_3: At school Jeff never felt like he fit in. He always
+      considered himself to be somewhat of',
+
+    i212_2_a__NA_problem: 'eeg_3 item 212 differs from norm_5
+
+      eeg_3: #Ann''s# algebra teacher wanted her to prove she had done
+      her own homework. The teacher asked #Ann# to solve
+
+      norm_5: #Emma''s# algebra teacher wanted her to prove she had done
+      her own homework. The teacher asked #Emma# to solve',
+
+    i216_2_a__NA_second: 'eeg_3 item 216 differs from norm_5
+
+      eeg_3: I couldn''t tell if #my friend# was lying. But he hesitated
+      for just
+
+      norm_5: I couldn''t tell if #he# was lying. But he hesitated for
+      just a',
+
+    i223_2_a__NA_mistake: 'norm_5 item 223 stim error, eeg_3 is correct
+
+      norm_5: The *account saw that the sums in the two columns did not
+      match up. He realized he must have made
+
+      eeg_3: The #accountant# saw that the sums in the two columns did
+      not match up. He realized he must have made',
+
+    i229_2_an_NA_imposter: 'eeg_3 item 229 differs from norm_5
+
+      eeg_3: The man in the #dark coat# was not who he said he was. We
+      accused him of being
+
+      norm_5: The man in the #jacket# was not who he said he was. We
+      accused him of being',
+
+    i233_2_a__NA_square: 'eeg_3 item 233 differs from norm_5
+
+      eeg_3: The shape Brenda #traced# was supposed to be perfectly
+      circular. It ended up looking more like
+
+      norm_5: The shape Brenda #had traced# was supposed to be
+      perfectly circular. It ended up looking more like',
+
+    i236_2_an_NA_owner: 'eeg_3 item 236 differs from norm_5
+
+      eeg_3: We found a lost puppy in our neighborhood yesterday. We
+      #checked to see# if it had
+
+      norm_5: We found a lost puppy in our neighborhood yesterday. We
+      #wanted to determine# if the dog had',
+
+    i238_2_a__NA_technique: 'eeg_3 item 238 differs from norm_5
+
+      eeg_3: There are #laws# about who is entitled to a patent. You
+      must prove you were the first person to come up with
+
+      norm_5: There are #rules# about who is entitled to a patent. You
+      must prove you were the first person to come up with'
+  }
+
+  patches:
+    i039_2_a__NA_representative: {
+      comment: 'work around to salvage eeg_3 item i039 B1a.scn, B2a.scn,
+        B3a.scn ... the only defect is a missing trailing period',
+
+      code: 'good_items = event_table_df[''eeg_stim''].apply(
+         lambda x: re.match(r''The international team.*[^\.]$'', x) is None);
+         event_table_df = event_table_df.loc[good_items].copy()'
+    }

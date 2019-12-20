@@ -1,0 +1,7 @@
+setfgcolor 82
+moveto 230 200
+lineto 410 200
+lineto 410 280
+lineto 230 280
+lineto 230 200
+
