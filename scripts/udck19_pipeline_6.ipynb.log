@@ -1,0 +1,121 @@
+udck19_pipeline_6.ipynb:INFO:
+udck19_pipeline_6
+CONDA_DEFAULT_ENV: udck19_pnas_121819
+pandas: 0.25.2 
+fitgrid: 0.4.8
+Start 29.Jun 2020 20:04:49
+
+udck19_pipeline_6.ipynb:INFO:Start modeling: 29.Jun 2020 20:05:47
+udck19_pipeline_6.ipynb:INFO:lmer_lurking
+udck19_pipeline_6.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5
+    [' article_cloze_z + other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + '
+ '(1 | article_item_id)',
+ ' article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ 'other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | '
+ 'article_item_id)',
+ '(1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)',
+ 'other_cloze_z + (1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)',
+ '(1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)',
+ 'other_cloze_z + (1 | expt) + (1 | sub_id) + (1| article_item_id)',
+ '(1 | expt) + (1 | sub_id) + (1| article_item_id)']
+    
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_z + other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+29.Jun 2020 20:05:47
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:53:39.592183
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+29.Jun 2020 20:59:27
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:51:49.223964
+
+udck19_pipeline_6.ipynb:INFO:fitting other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+29.Jun 2020 21:51:16
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:52:32.670070
+
+udck19_pipeline_6.ipynb:INFO:fitting (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)
+29.Jun 2020 22:43:48
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:50:55.306495
+
+udck19_pipeline_6.ipynb:INFO:fitting other_cloze_z + (1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)
+29.Jun 2020 23:34:44
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:52:00.903597
+
+udck19_pipeline_6.ipynb:INFO:fitting (1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)
+30.Jun 2020 00:26:45
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:50:23.387846
+
+udck19_pipeline_6.ipynb:INFO:fitting other_cloze_z + (1 | expt) + (1 | sub_id) + (1| article_item_id)
+30.Jun 2020 01:17:08
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:17:29.605499
+
+udck19_pipeline_6.ipynb:INFO:fitting (1 | expt) + (1 | sub_id) + (1| article_item_id)
+30.Jun 2020 01:34:38
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:17:09.266749
+
+udck19_pipeline_6.ipynb:INFO:lmer_uncorr_ranef
+udck19_pipeline_6.ipynb:INFO:
+    random effects structures
+    file: /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_uncorr_ranef.h5
+    [' article_cloze + (article_cloze || expt) + (article_cloze || sub_id) + '
+ '(article_cloze || item_id)',
+ ' article_cloze_c + (article_cloze_c || expt) + (article_cloze_c || sub_id) + '
+ '(article_cloze_c || item_id)',
+ ' article_cloze_z + (article_cloze_z || expt) + (article_cloze_z || sub_id) + '
+ '(article_cloze_z || item_id)',
+ ' article_cloze + (1 | expt) + (article_cloze || sub_id) + (1 | item_id)',
+ ' article_cloze_c + (1 | expt) + (article_cloze_c || sub_id) + (1 | item_id)',
+ ' article_cloze_z + (1 | expt) + (article_cloze_z || sub_id) + (1 | item_id)',
+ ' article_cloze + (1 | expt) + (article_cloze | sub_id) + (1 | item_id)',
+ ' article_cloze_c + (1 | expt) + (article_cloze_c | sub_id) + (1 | item_id)',
+ ' article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | item_id)']
+    
+udck19_pipeline_6.ipynb:INFO:removing previous /mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_uncorr_ranef.h5
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze + (article_cloze || expt) + (article_cloze || sub_id) + (article_cloze || item_id)
+30.Jun 2020 01:51:47
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 1:34:07.155448
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_c + (article_cloze_c || expt) + (article_cloze_c || sub_id) + (article_cloze_c || item_id)
+30.Jun 2020 03:25:54
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 1:46:03.401113
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_z + (article_cloze_z || expt) + (article_cloze_z || sub_id) + (article_cloze_z || item_id)
+30.Jun 2020 05:11:57
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 1:43:27.234518
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze + (1 | expt) + (article_cloze || sub_id) + (1 | item_id)
+30.Jun 2020 06:55:25
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:32:21.224013
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_c + (1 | expt) + (article_cloze_c || sub_id) + (1 | item_id)
+30.Jun 2020 07:27:46
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:33:15.374140
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_z + (1 | expt) + (article_cloze_z || sub_id) + (1 | item_id)
+30.Jun 2020 08:01:01
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:32:27.551867
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze + (1 | expt) + (article_cloze | sub_id) + (1 | item_id)
+30.Jun 2020 08:33:29
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:40:07.167860
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_c + (1 | expt) + (article_cloze_c | sub_id) + (1 | item_id)
+30.Jun 2020 09:13:36
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:42:32.428289
+
+udck19_pipeline_6.ipynb:INFO:fitting  article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | item_id)
+30.Jun 2020 09:56:08
+udck19_pipeline_6.ipynb:INFO:Elapsed time: 0:41:38.759800
+
+udck19_pipeline_6.ipynb:INFO:Elapsed time modeling: 14:32:00.343050
+udck19_pipeline_6.ipynb:INFO:
+Plotting fitted models from : (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5'), PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_uncorr_ranef.h5'))
+
+udck19_pipeline_6.ipynb:INFO:Alternative model AIC comparisons
+{'article_other_stack': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), [' article_cloze_z + other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)', ' article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)', 'other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)', '(1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)']), 'other_KIM_comp': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), ['other_cloze_z + (1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)', '(1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)']), 'other_KIP_comp': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), ['other_cloze_z + (1 | expt) + (1 | sub_id) + (1| article_item_id)', '(1 | expt) + (1 | sub_id) + (1| article_item_id)']), 'uncorr_MAX': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_uncorr_ranef.h5'), [' article_cloze + (article_cloze || expt) + (article_cloze || sub_id) + (article_cloze || item_id)', ' article_cloze_c + (article_cloze_c || expt) + (article_cloze_c || sub_id) + (article_cloze_c || item_id)', ' article_cloze_z + (article_cloze_z || expt) + (article_cloze_z || sub_id) + (article_cloze_z || item_id)']), 'uncorr_KIM': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_uncorr_ranef.h5'), [' article_cloze + (1 | expt) + (article_cloze || sub_id) + (1 | item_id)', ' article_cloze_c + (1 | expt) + (article_cloze_c || sub_id) + (1 | item_id)', ' article_cloze_z + (1 | expt) + (article_cloze_z || sub_id) + (1 | item_id)']), 'corr_KIM': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_uncorr_ranef.h5'), [' article_cloze + (1 | expt) + (article_cloze | sub_id) + (1 | item_id)', ' article_cloze_c + (1 | expt) + (article_cloze_c | sub_id) + (1 | item_id)', ' article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | item_id)'])}
+udck19_pipeline_6.ipynb:INFO:lmerERPs for {'other_KIM': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), 'other_cloze_z + (1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)'), 'other_KIM_bias': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), 'other_cloze_z + (1 | expt) + (other_cloze_z | sub_id) + (1| article_item_id)'), 'other_KIP': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), 'other_cloze_z + (1 | expt) + (1 | sub_id) + (1| article_item_id)'), 'other_KIP_bias': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), 'other_cloze_z + (1 | expt) + (1 | sub_id) + (1| article_item_id)'), 'article_KIM': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5'), 'article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)'), 'article_KIM_spurious': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5'), 'article_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)'), 'article_KIP': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5'), 'article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)'), 'article_KIP_spurious': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_acz_ranef.h5'), 'article_cloze_z + (1 | expt) + (1 | sub_id) + (1 | article_item_id)'), 'article_other_KIM': (PosixPath('/mnt/cube/home/turbach/papers/udck19/analysis/measures/modeling/lmer_lurking.h5'), ' article_cloze_z + other_cloze_z + (1 | expt) + (article_cloze_z | sub_id) + (1 | article_item_id)')}
+udck19_pipeline_6.ipynb:INFO:
+Done 30.Jun 2020 10:48:47
+Elapsed time: 14:43:57.321513
+
